@@ -9,4 +9,4 @@ The files hosted in this repository are:
 
 2.) run_analysis.R: this R script file contains the code used to perform the analyses described in all five steps of the project instructions.
 
-3.) file.txt: This file is the output of the 5th step in the project instructions. This is the file that was uploaded to the course website.
+3.) get_proj_mean.txt: This file is the output of the 5th step in the project instructions. This is the file that was uploaded to the course website.
