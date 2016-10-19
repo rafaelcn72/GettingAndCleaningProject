@@ -63,5 +63,5 @@ activity_names <- merge(proj_data, activityLabels,
 tidy_data <- aggregate(. ~subjectId + activityId, activity_names, mean)
 tidy_data <- tidy_data[order(tidy_data$subjectId, tidy_data$activityId),]
 
-write.table(tidy_data, "get_proj_mean.txt", row.name=FALSE)
+write.table(tidy_data, "./get/get_proj_mean.txt", row.name=FALSE)
 
