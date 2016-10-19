@@ -21,23 +21,97 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 ## Introduction for the R code "run_analysis.R" submmited
 
-- Using `download.file()` together with `unzip()` function to download the zip file from website to my compute. 
-- Using `read.table()` function to load "X_train.txt", "y_train", "subject_train" in train directory and "X_test", "y_test", "subject_test" into R.
-- Using `rbind()` and `cbind()` functions to merge all train and test data together.
+CodeBook for the "get_proj_mean.txt" file:
 
-- Using `read.table()` function to load "features.txt" into R.
-- Using `grep()` function to find the indexes with "mean()" and "sd()".
-- select all relevant columns and set the columns name using the selected features name.
-
-- Using `read.table()` function to load "activity_labels.txt" into R.
-- Using `factor()` function with arguments "levels = " and "labels = " to replace the numbers to activity names.
-
-- Using `gsub()` function to replace all characters I think they are needed to replace.
-
-- Using `group_by()` and `summarise_each()` functions in `dplyr` package to calculate all means for each activity and wach subject.
+    subject --- the ID of the test subject
+    activity --- the type of activity that took place during the measurement
+    WALKING (value 1) --- subject walked during measurement
+    WALKING_UPSTAIRS (value 2) --- subject walked upwards during measurement
+    WALKING_DOWNSTAIRS (value 3) --- subject walked downwards during measurement
+    SITTING (value 4) --- subject sat in place during measurement
+    STANDING (value 5) --- subject stood in place during measurement
+    LAYING (value 6) --- subject layed during measurement
 
 ## About variables data
 
-- x_train, y_train, x_test, y_test, subject_train and subject_test contain the data from the downloaded files.
-- x_data, y_data and subject_data merge the previous datasets to further analysis.
-- features contains the correct names for the x_data dataset, which are applied to the column names stored in.
+tBodyAccmeanX
+tBodyAccmeanY
+tBodyAccmeanZ
+tBodyAccstdX
+tBodyAccstdY
+tBodyAccstdZ
+tGravityAccmeanX
+tGravityAccmeanY
+tGravityAccmeanZ
+tGravityAccstdX
+tGravityAccstdY
+tGravityAccstdZ
+tBodyAccJerkmeanX
+tBodyAccJerkmeanY
+tBodyAccJerkmeanZ
+tBodyAccJerkstdX
+tBodyAccJerkstdY
+tBodyAccJerkstdZ
+tBodyGyromeanX
+tBodyGyromeanY
+tBodyGyromeanZ
+tBodyGyrostdX
+tBodyGyrostdY
+tBodyGyrostdZ
+tBodyGyroJerkmeanX
+tBodyGyroJerkmeanY
+tBodyGyroJerkmeanZ
+tBodyGyroJerkstdX
+tBodyGyroJerkstdY
+tBodyGyroJerkstdZ
+tBodyAccMagmean
+tBodyAccMagstd
+tGravityAccMagmean
+tGravityAccMagstd
+tBodyAccJerkMagmean
+tBodyAccJerkMagstd
+tBodyGyroMagmean
+tBodyGyroMagstd
+tBodyGyroJerkMagmean
+tBodyGyroJerkMagstd
+fBodyAccmeanX
+fBodyAccmeanY
+fBodyAccmeanZ
+fBodyAccstdX
+fBodyAccstdY
+fBodyAccstdZ
+fBodyAccmeanFreqX
+fBodyAccmeanFreqY
+fBodyAccmeanFreqZ
+fBodyAccJerkmeanX
+fBodyAccJerkmeanY
+fBodyAccJerkmeanZ
+fBodyAccJerkstdX
+fBodyAccJerkstdY
+fBodyAccJerkstdZ
+fBodyAccJerkmeanFreqX
+fBodyAccJerkmeanFreqY
+fBodyAccJerkmeanFreqZ
+fBodyGyromeanX
+fBodyGyromeanY
+fBodyGyromeanZ
+fBodyGyrostdX
+fBodyGyrostdY
+fBodyGyrostdZ
+fBodyGyromeanFreqX
+fBodyGyromeanFreqY
+fBodyGyromeanFreqZ
+fBodyAccMagmean
+fBodyAccMagstd
+fBodyAccMagmeanFreq
+fBodyBodyAccJerkMagmean
+fBodyBodyAccJerkMagstd
+fBodyBodyAccJerkMagmeanFreq
+fBodyBodyGyroMagmean
+fBodyBodyGyroMagstd
+fBodyBodyGyroMagmeanFreq
+fBodyBodyGyroJerkMagmean
+fBodyBodyGyroJerkMagstd
+fBodyBodyGyroJerkMagmeanFreq
+
+
